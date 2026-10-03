@@ -173,6 +173,12 @@ export const AlbumResponseSchema = z
       .optional()
       .describe('Last modified asset timestamp'),
     // TODO: use `isoDatetimeToDate` when using `ZodSerializerDto` on the controllers.
+    albumThumbnailAssetUpdatedAt: z
+      .string()
+      .meta({ format: 'date-time' })
+      .optional()
+      .describe('Last updated timestamp of the album thumbnail asset'),
+    // TODO: use `isoDatetimeToDate` when using `ZodSerializerDto` on the controllers.
     startDate: z
       .string()
       .meta({ format: 'date-time' })
